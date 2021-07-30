@@ -30,7 +30,7 @@ public class ResourceCentre {
 				ResourceCentre.setHeader("ADD");			
 				ResourceCentre.setHeader("ITEM TYPES");
 				System.out.println("1. Camcorder");
-				System.out.println("2. Chromebook");
+				System.out.println("2. Chromebook"); 
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
