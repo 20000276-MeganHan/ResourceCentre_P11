@@ -28,7 +28,13 @@ public class ResourceCentre {
 			} else if (option == 2) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");			
+<<<<<<< HEAD
+				ResourceCentre.setHeader("ITEM TYPES");
+				System.out.println("1. Camcorder");
+				System.out.println("2. Chromebook");  
+=======
 				itemTypeMenu();
+>>>>>>> branch 'master' of https://github.com/20000276-MeganHan/ResourceCentre_P11.git
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
@@ -143,7 +149,7 @@ public class ResourceCentre {
 
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
-		// write your code here
+		
 		for (int i = 0; i < chromebookList.size(); i++) {
 
 			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
@@ -229,7 +235,7 @@ public class ResourceCentre {
 	
 
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
-		// write your code here
+		
 		boolean isLoaned = false;
 
 		for (int i = 0; i < chromebookList.size(); i++) {
@@ -250,7 +256,7 @@ public class ResourceCentre {
 	}
 
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here
+		
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag = Helper.readString("Enter asset tag > ");
 		String due = Helper.readString("Enter due date > ");
@@ -290,7 +296,7 @@ public class ResourceCentre {
 			System.out.println("Camcorder " + tag + " returned");
 		}
 	}
-	// write your doReturnChromebook code here
+	
 	public static boolean doReturnChromebook(ArrayList<Chromebook> chromebookList,String tag) {
 		boolean isReturned = false;
 
@@ -307,7 +313,7 @@ public class ResourceCentre {
 		
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here
+	
 		ResourceCentre.viewAllChromebook(chromebookList);
 		String tag = Helper.readString("Enter asset tag > ");
 		Boolean isReturned = doReturnChromebook(chromebookList, tag);
